@@ -26,9 +26,13 @@ namespace Propriedades.Models
         public void ListarAlunos()
         {
             Console.WriteLine($"Alunos do curso de: {Nome}");
-            foreach (Pessoa aluno in Alunos){
-                Console.WriteLine(aluno.NomeCompleto);
+            for (int Count = 0; Count < Alunos.Count; Count++)
+            {
+                //string texto = "N° "+ Count + "-" + Alunos[Count].NomeCompleto ;
+                string texto = $"N° {Count+1} - {Alunos[Count].NomeCompleto}";
+                Console.WriteLine(texto);
             }
+            
         }
     }
 }
